@@ -1,0 +1,35 @@
+*{
+    margin: 0%;
+}
+
+.flex{
+    display: flex;
+}
+
+.header{
+    background-color: rgb(50, 167, 145);
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header img{
+    width: 5%;   
+}
+
+#trybewarts-forms-logo{
+    height: 500px;
+}
+
+#evaluation-form{
+    width: 675px;
+    flex-direction: column;
+}
+
+#radio{
+    flex-direction: column;
+}
+
+#label-rate{
+    padding-right: 2%;
+}
