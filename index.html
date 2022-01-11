@@ -53,6 +53,7 @@
                     </label>
 
                     <select name="" id="house">
+                        <option value="" id=""></option>
                         <option value="Gitnória" id="gitnoria-house">Gitnória</option>
                         <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
                         <option value="Corvinode" id="corvinode-house">Corvinode</option>
@@ -79,28 +80,28 @@
                 <section>
                     <p id="label-content">Qual conteúdo você está com mais vontade de aprender?</p>
 
-                    <label for="">
-                        <input type="checkbox" value="HoFs">HoFs
+                    <label for="hofs">
+                        <input type="checkbox" value="HoFs" id="hofs">HoFs
                     </label>
 
-                    <label for="">
-                        <input type="checkbox" value="Jest">Jest
+                    <label for="jest">
+                        <input type="checkbox" value="Jest" id="jest">Jest
                     </label>
 
-                    <label for="">
-                        <input type="checkbox" value="Promises">Promises
+                    <label for="promises">
+                        <input type="checkbox" value="Promises" id="promises">Promises
                     </label>
 
-                    <label for="">
-                        <input type="checkbox" value="React">React
+                    <label for="react">
+                        <input type="checkbox" value="React" id="react">React
                     </label>
 
-                    <label for="">
-                        <input type="checkbox" value="SQL">SQL
+                    <label for="sql">
+                        <input type="checkbox" value="SQL" id="sql">SQL
                     </label>
 
-                    <label for="">
-                        <input type="checkbox" value="Python">Python
+                    <label for="python">
+                        <input type="checkbox" value="Python" id="python">Python
                     </label>
 
                 </section>
@@ -108,44 +109,44 @@
                 <section class="flex">
                     <p id="label-rate">Como você avalia a Trybewarts?</p>
 
-                    <label for="">
-                        <input type="radio" value="1" name="rate">1
+                    <label for="um">
+                        <input type="radio" value="1" name="rate" id="um">1
                     </label>
 
-                    <label for="">
-                        <input type="radio" value="2" name="rate">2
+                    <label for="dois">
+                        <input type="radio" value="2" name="rate" id="dois">2
                     </label>
 
-                    <label for="">
-                        <input type="radio" value="3" name="rate">3
+                    <label for="tres">
+                        <input type="radio" value="3" name="rate" id="tres">3
                     </label>
 
-                    <label for="">
-                        <input type="radio" value="4" name="rate">4
+                    <label for="quatro">
+                        <input type="radio" value="4" name="rate" id="quatro">4
                     </label>
 
-                    <label for="">
-                        <input type="radio" value="5" name="rate">5
+                    <label for="cinco">
+                        <input type="radio" value="5" name="rate" id="cinco">5
                     </label>
 
-                    <label for="">
-                        <input type="radio" value="6" name="rate">6
+                    <label for="seis">
+                        <input type="radio" value="6" name="rate" id="seis">6
                     </label>
 
-                    <label for="">
-                        <input type="radio" value="7" name="rate">7
+                    <label for="sete">
+                        <input type="radio" value="7" name="rate" id="sete">7
                     </label>
 
-                    <label for="">
-                        <input type="radio" value="8" name="rate">8
+                    <label for="oito">
+                        <input type="radio" value="8" name="rate" id="oito">8
                     </label>
 
-                    <label for="">
-                        <input type="radio" value="9" name="rate">9
+                    <label for="nove">
+                        <input type="radio" value="9" name="rate" id="nove">9
                     </label>
 
-                    <label for="">
-                        <input type="radio" value="10" name="rate">10
+                    <label for="dez">
+                        <input type="radio" value="10" name="rate" id="dez">10
                     </label>
 
                 </section>
@@ -154,10 +155,18 @@
                     <p class="textarea">Deixe seu comentário:</p>
 
                     <label for="">
-                        <textarea name="" id="" cols="30" rows="10" maxlength="500"></textarea>
+                        <textarea name="" id="textblock" cols="30" rows="10" maxlength="500"></textarea>
                     </label>
 
                 </section>
+
+                <div>
+                    <label id="label-infos" for="">
+                        <input required type="checkbox" id="agreement">Você concorda com o uso das informações acima?
+                    </label>
+                </div>
+
+                <button disabled type="submit" id="submit-btn">Enviar</button>
 
             </form>
 
@@ -166,6 +175,10 @@
             <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="">
         </div>
     </main>
+
+    <footer>
+        <p>Direitos reservados à Trybewarts©</p>
+    </footer>
     
     
     

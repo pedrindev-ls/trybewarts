@@ -33,3 +33,10 @@ header img{
 #label-rate{
     padding-right: 2%;
 }
+
+#textblock{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 150px;
+    min-height: 150px;
+}
