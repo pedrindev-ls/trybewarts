@@ -1,40 +1,40 @@
-*{
+* {
     margin: 0%;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
-.header{
+.header {
     background-color: rgb(50, 167, 145);
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
-header img{
+header img {
     width: 5%;   
 }
 
-#trybewarts-forms-logo{
+#trybewarts-forms-logo {
     height: 500px;
 }
 
-#evaluation-form{
+#evaluation-form {
     width: 675px;
     flex-direction: column;
 }
 
-#radio{
+#radio {
     flex-direction: column;
 }
 
-#label-rate{
+#label-rate {
     padding-right: 2%;
 }
 
-#textblock{
+#textblock {
     max-width: 100%;
     min-width: 100%;
     max-height: 150px;
