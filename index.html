@@ -35,7 +35,7 @@
         
         <div>
             <h2>Formulátio de Avaliação</h2>
-            <form action="" id="evaluation-form" class="flex">
+            <form action="" method="post" id="evaluation-form" class="flex">
 
                 <div>
                     <label for="">
@@ -81,27 +81,27 @@
                     <p id="label-content">Qual conteúdo você está com mais vontade de aprender?</p>
 
                     <label for="hofs">
-                        <input type="checkbox" value="HoFs" id="hofs">HoFs
+                        <input type="checkbox" value="HoFs" id="hofs" name="subjects">HoFs
                     </label>
 
                     <label for="jest">
-                        <input type="checkbox" value="Jest" id="jest">Jest
+                        <input type="checkbox" value="Jest" id="jest" name="subjects">Jest
                     </label>
 
                     <label for="promises">
-                        <input type="checkbox" value="Promises" id="promises">Promises
+                        <input type="checkbox" value="Promises" id="promises" name="subjects">Promises
                     </label>
 
                     <label for="react">
-                        <input type="checkbox" value="React" id="react">React
+                        <input type="checkbox" value="React" id="react" name="subjects">React
                     </label>
 
                     <label for="sql">
-                        <input type="checkbox" value="SQL" id="sql">SQL
+                        <input type="checkbox" value="SQL" id="sql" name="subjects">SQL
                     </label>
 
                     <label for="python">
-                        <input type="checkbox" value="Python" id="python">Python
+                        <input type="checkbox" value="Python" id="python" name="subjects">Python
                     </label>
 
                 </section>
@@ -161,7 +161,7 @@
                 </section>
 
                 <div>
-                    <label id="label-infos" for="">
+                    <label id="label-infos" for="agreement">
                         <input required type="checkbox" id="agreement">Você concorda com o uso das informações acima?
                     </label>
                 </div>
