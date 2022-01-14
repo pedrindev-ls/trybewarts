@@ -25,6 +25,17 @@ login.addEventListener('click' ,function(){
     }
 })
 
+//Contador
+
+let obsEvaluation = document.getElementById("textarea")
+let contador = document.getElementById('counter')
+let caracteres = 500
+
+obsEvaluation.addEventListener('input', function(event){
+    contador.innerText = (caracteres - obsEvaluation.selectionEnd)
+    console.log(caracteres - obsEvaluation.selectionEnd)
+})
+
 //Pagina Final
 
 let nameEvaluation = document.getElementById("input-name")
@@ -34,29 +45,57 @@ let houseEvaluation = document.getElementById("house")
 let familyEvaluation = document.getElementsByName('family')
 let subjectsEvaluation = document.getElementsByName('subjects')
 let rateEvaluation = document.getElementsByName("rate")
-let obsEvaluation = document.getElementById("textblock")
+
+info = {
+    Nome: nameEvaluation.value + " " + lastnameEvaluation.value,
+    Email: emailEvaluation.value,
+    Casa: houseEvaluation.value,
+    Familia: '',
+    Materias: '',
+    Avaliacao: '',
+    Observacoes: obsEvaluation.value,
+};
 
 botao.addEventListener('click', function(){
+    
+    info.Nome = nameEvaluation.value + " " + lastnameEvaluation.value;
+    info.Email = emailEvaluation.value;
+    info.Casa = houseEvaluation.value;
+    info.Observacoes = obsEvaluation.value;
+    
+    let familia = '';
+    let materia = '';
+    let rate = '';
+
     for (i = 0; i < familyEvaluation.length; i++){
         if(familyEvaluation[i].checked){
-            let familia = familyEvaluation[i].value
+            familia =familyEvaluation[i].value
             console.log(familia)
         }
     }
+
+    info.familia = familia
     
     for (i = 0; i < subjectsEvaluation.length; i++){
         if(subjectsEvaluation[i].checked){
-            let materia = subjectsEvaluation[i].value
+            materia = materia + ' ' + subjectsEvaluation[i].value
             console.log(materia)
         }
     }
+
+    info.Materias = materia
     
     for (i = 0; i < rateEvaluation.length; i++){
         if(rateEvaluation[i].checked){
-            let rate = rateEvaluation[i].value
+            rate = rateEvaluation[i].value
             console.log(rate)
         }
     }
 
+    info.Avaliacao = rate
+
+    console.log(info)
+    console.log(info.Avaliacao)
+    console.log(info.Observacoes)
 
 })
