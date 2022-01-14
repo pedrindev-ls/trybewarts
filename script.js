@@ -33,7 +33,6 @@ const caracteres = 500;
 
 obsEvaluation.addEventListener('input', () => {
   contador.innerText = (caracteres - obsEvaluation.selectionEnd);
-  console.log(caracteres - obsEvaluation.selectionEnd);
 });
 
 // Pagina Final
@@ -62,7 +61,6 @@ function searchFamily() {
   for (let i = 0; i < familyEvaluation.length; i += 1) {
     if (familyEvaluation[i].checked) {
       familia = familyEvaluation[i].value;
-      console.log(familia);
     }
   }
 
@@ -75,7 +73,6 @@ function searchRate() {
   for (let i = 0; i < rateEvaluation.length; i += 1) {
     if (rateEvaluation[i].checked) {
       rate = rateEvaluation[i].value;
-      console.log(rate);
     }
   }
 
@@ -88,13 +85,13 @@ function searchSubjects() {
   for (let i = 0; i < subjectsEvaluation.length; i += 1) {
     if (subjectsEvaluation[i].checked) {
       materia = `${materia}${subjectsEvaluation[i].value} `;
-      console.log(materia);
     }
   }
   info.Materias = materia;
 }
 
-botao.addEventListener('click', () => {
+botao.addEventListener('click', (event) => {
+  event.preventDefault();
   info.Nome = `${nameEvaluation.value}  ${lastnameEvaluation.value}`;
   info.Email = emailEvaluation.value;
   info.Casa = houseEvaluation.value;
@@ -103,5 +100,9 @@ botao.addEventListener('click', () => {
   searchRate();
   searchSubjects();
 
+  const paragrafo = document.getElementsByClassName('resultado-do-formulario');
+  for (let index = 0; index <= Object.keys(info).length; index += 1) {
+    paragrafo[0].innerText(`${Object.keys(info)[index]}: ${Object.value(info)[index]}`);
+  }
   console.log(info);
 });
