@@ -59,7 +59,7 @@ const info = {
 function searchFamily() {
   let familia = '';
 
-  for (let i = 0; i < familyEvaluation.length; i + 1) {
+  for (let i = 0; i < familyEvaluation.length; i += 1) {
     if (familyEvaluation[i].checked) {
       familia = familyEvaluation[i].value;
       console.log(familia);
@@ -72,34 +72,36 @@ function searchFamily() {
 function searchRate() {
   let rate = '';
 
-  for (let i = 0; i < rateEvaluation.length; i + 1) {
+  for (let i = 0; i < rateEvaluation.length; i += 1) {
     if (rateEvaluation[i].checked) {
       rate = rateEvaluation[i].value;
       console.log(rate);
     }
   }
-  
-  info.Avaliacao = rate
+
+  info.Avaliacao = rate;
 }
 
 function searchSubjects() {
   let materia = '';
 
-  for (let i = 0; i < subjectsEvaluation.length; i + 1) {
+  for (let i = 0; i < subjectsEvaluation.length; i += 1) {
     if (subjectsEvaluation[i].checked) {
-      materia = `${materia}
-      ${subjectsEvaluation}`;
+      materia = `${materia}${subjectsEvaluation[i].value} `;
       console.log(materia);
     }
   }
   info.Materias = materia;
 }
 
-botao.addEventListener('click', searchFamily, searchRate, searchSubjects, () => {
+botao.addEventListener('click', () => {
   info.Nome = `${nameEvaluation.value}  ${lastnameEvaluation.value}`;
   info.Email = emailEvaluation.value;
   info.Casa = houseEvaluation.value;
   info.Observacoes = obsEvaluation.value;
+  searchFamily();
+  searchRate();
+  searchSubjects();
 
   console.log(info);
 });
