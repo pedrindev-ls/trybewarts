@@ -44,15 +44,16 @@ const houseEvaluation = document.getElementById('house');
 const familyEvaluation = document.getElementsByName('family');
 const subjectsEvaluation = document.getElementsByName('subjects');
 const rateEvaluation = document.getElementsByName('rate');
+const formulario = document.getElementById('evaluation-form');
 
 const info = {
   Nome: '',
   Email: '',
   Casa: '',
-  Familia: '',
-  Materias: '',
-  Avaliacao: '',
-  Observacoes: '',
+  Família: '',
+  Matérias: '',
+  Avaliação: '',
+  Observações: '',
 };
 
 function searchFamily() {
@@ -64,7 +65,7 @@ function searchFamily() {
     }
   }
 
-  info.Familia = familia;
+  info.Família = familia;
 }
 
 function searchRate() {
@@ -76,7 +77,7 @@ function searchRate() {
     }
   }
 
-  info.Avaliacao = rate;
+  info.Avaliação = rate;
 }
 
 function searchSubjects() {
@@ -84,25 +85,28 @@ function searchSubjects() {
 
   for (let i = 0; i < subjectsEvaluation.length; i += 1) {
     if (subjectsEvaluation[i].checked) {
-      materia = `${materia}${subjectsEvaluation[i].value} `;
+      materia = `${materia}${subjectsEvaluation[i].value}, `;
     }
   }
-  info.Materias = materia;
+  info.Matérias = materia;
 }
 
 botao.addEventListener('click', (event) => {
-  event.preventDefault();
+  event.preventDefault(event);
   info.Nome = `${nameEvaluation.value}  ${lastnameEvaluation.value}`;
   info.Email = emailEvaluation.value;
   info.Casa = houseEvaluation.value;
-  info.Observacoes = obsEvaluation.value;
+  info.Observações = obsEvaluation.value;
   searchFamily();
   searchRate();
   searchSubjects();
 
-  const paragrafo = document.getElementsByClassName('resultado-do-formulario');
-  for (let index = 0; index <= Object.keys(info).length; index += 1) {
-    paragrafo[0].innerText(`${Object.keys(info)[index]}: ${Object.value(info)[index]}`);
+  formulario.innerText = '';
+
+  // const paragrafo = document.getElementsByClassName('resultado-do-formulario');
+  for (let index = 0; index < Object.keys(info).length; index += 1) {
+    formulario.innerText += `${Object.keys(info)[index]}: ${Object.values(info)[index]}
+    `;
   }
   console.log(info);
 });
